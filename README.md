@@ -1,0 +1,92 @@
+# PdfMaipulatorDemo
+
+This demo shows how you can use our PdfDocument class on the back end (along 
+with our PdfDecoder and ThumbnailView to provide a visual UI)
+
+You can rearrange pages, delete pages, and combine pages from multiple pdfs with 
+a simple thumbnail driven UI
+
+Demonstrates how to manipulate pages in a PDF, and resave without having to recompose
+the entire PDF. Includes the ability to reoder pages, remove pages, merge multiple PDF
+files, and save the result.
+
+This Windows Forms application demonstrates the use
+of features in our PdfDoc class that do NOT require the purchase of DotPdf.
+
+This is the VB.NET version. We also offer a [C# version](https://github.com/AtalaSupport/DemoGallery_Desktop_PdfManipulatorDemo_CS_x64).    
+
+
+## Instructions
+PDF Manipulator is a tool used for combining pages from different PDF files into a new PDF file.
+
+### Adding Pages:
+To get started, click the File menu and select the Add Files… menu item.  Each page of the PDF file will be shown as a thumbnail and its filename is listed in the control on the right side of the window.  Additional files can be added to the existing thumbnails using this same procedure.
+
+### Reordering Pages:
+You can reorder the pages by dragging the thumbnails with your mouse.  An indicator is shown between the pages where the page you’re dragging will be inserted once the mouse button is released.
+
+### Removing Pages:
+To remove a page, select the page thumbnail with your mouse and press the Delete key on your keyboard.  To remove all pages from a file that was added, select the filename from the list on the right and press the Delete key on your keyboard.
+
+### Saving the Result:
+To save these pages as a multipage PDF, click the File menu and select the Save As… menu item.  This will bring up a dialog so you can choose where to save the image and its filename.
+
+
+## Licensing
+This application requires a license for DotImage Document Imaging as well as our PdfReader addon. You may also request a 30 day evaulation if youre evaluating if DotImage is right for you.
+
+
+## SDK Dependencies
+This app was built based on 2026.2.0.0. It targets .NET Framework 4.6.2 and was created in Visual Studio 2022. You must have our SDK installed (and licesed per above)
+
+[Download DotImage](https://www.atalasoft.com/BeginDownload/DotImageDownloadPage)
+
+
+### Using NuGet for SDK Dependencies
+We do publish our SDK components to NuGet. We have chosen to base the demo on local installed SDK because this leads to much smaller applications (NuGet packages add a lot of overhead due to the way they're packaged and deployed, and many of our demos -- including this one -- are often used to reproduce issues that need to be submitted to support. Apps that use NuGet are often significantly larger and run up against our maximum support case upload size)
+
+Still, if you wish to use NuGet for the dependencies instead of relying on locally installed SDK, you can.
+
+- Take note of each of the references we've included:
+    - Atalasoft.DotImage.dll
+    - Atalasoft.DotImage.Lib.dll
+    - Atalasoft.DotImage.Pdf.dll
+    - Atalasoft.DotImage.PdfDoc.Bridge.dll
+    - Atalasoft.DotImage.PdfReader.dll
+    - Atalasoft.DotImage.WinControls.dll
+    - Atalasoft.PdfDoc.dll
+    - Atalasoft.Shared.dll
+- Remove those referneces
+- Open the NuGet Package Manger from `Tools -> NuGet Package Manager -> Manage NuGet Packages for this Solution`
+- Browse for and install  Atalasoft.DotImage.WinControls.x64 - It will pull in DotImage Document Imaging (the base SDK) and our windows controls and shared dll
+- Browse for and install Atalasoft.Pdf.x64  to bring in the PdfEncoder
+- Browse for and install Atalasoft.PdfReader.x64. (optional if you wish to have support for PDF files)
+
+
+## Downloading source
+The sources can be downloaded for [c#](https://github.com/AtalaSupport/DemoGallery_Desktop_PdfManipulatorDemo_CS_x64/archive/refs/heads/main.zip) and [VB.NET](https://github.com/AtalaSupport/DemoGallery_Desktop_PdfManipulatorDemo_VB_x64/archive/refs/heads/main.zip)
+
+
+## Cloning
+We recommend the following if you wish to donload/clone a copy
+
+Example: git for windows
+```bash
+git clone https://github.com/AtalaSupport/DemoGallery_Desktop_PdfManipulatorDemo_VB_x64.git PdfManipulatorDemo
+```
+
+## Related documentation
+In addition to this README, the Atalasoft documentation set includes the following:  
+- [AtalaSupport Github](https://github.com/AtalaSupport/) For an extensive set of sample apps.  
+- [Atalasoft's APIs & Developer Guides page](https://www.atalasoft.com/Support/APIs-Dev-Guides) for our Developers guide and API references.  
+- [Atalasoft Support](http://www.atalasoft.com/support/) for our main support portal.
+- [Atalasoft Knowledgebase](http://www.atalasoft.com/kb2) where you can find answers to common questions / issues.  
+
+
+## Getting Help for Atalasoft products
+Atalasoft regularly updates our support [Knowledgebase](http://www.atalasoft.com/kb2) with the latest information about our products. To access some resources, you must have a valid Support Agreement with an authorized Atalasoft Reseller/Partner or with Atalasoft directly. Use the tools that Atalasoft provides for researching and identifying issues. 
+
+Customers with an active evaluation, or those with active support / maintenance may [create a support case](https://www.atalasoft.com/Support/my-portal/Cases/Create-Case) 24/7, or call in to support ([+1 949 236-6510](tel:19492366510) ) during our normal support hours (Monday - Friday 8:00am to 5:00PM Eastern (New York) time).  
+
+Customers who are unable to create a case or call in may [email our Sales Team](email:sales@atalasoft.com).  
+
